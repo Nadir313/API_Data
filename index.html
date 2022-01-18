@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>World Wide Covid-19 Data</title>
+</head>
+<body>
+ 
+  <div class="container">
+    <nav class="navbar navbar-expand-md navbar-light bg-light ">
+
+      <a href="" class="navbar-brand">
+          <img src="images/Covid-19_Mesures-pour-les-entreprises.png.png" alt="Covid19 logo" width="110" height="60" class="d-inline-block align-top">
+      </a>
+
+      <ul class="navbar-nav d-flex justify-content-evenly ">
+          <li> <a href="" class="nav-link"> worldWide</a></li>
+          <li>  <a href="" class="nav-link">Countries</a></li>  
+      </ul>
+         
+    </nav>
+</div>
+      <header >
+        <!-- <div class="container bg-light">
+          <navbar class="navbar navbar-expand-lg navbar-light bg-light">
+              <a href="#" class = "navbar-brand"> Fetchig-api </a>
+              
+          </navbar>
+      </div> -->
+      <select  id="option" class="form-select bg-info" >
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+        </select>
+  
+          <h2 class="text-center">Global data</h2>
+        <table class="table table-bordered border-primary">
+          <thead>
+            <tr class="text-white text-center">
+              <th scope="col"class="bg-dark ">NewConfirmed</th>
+              <th scope="col" class="bg-warning">TotalConfirmed</th>
+              <th scope="col" class="bg-danger">New Deaths</th>
+              <th scope="col" class="bg-info">New recovered </th>
+              <th scope="col" class="bg-success">Total recovered</th>
+              <th scope="col" class="bg-danger">total death</th>
+            </tr>
+          </thead>
+          <tbody id="tbody2">
+            <tr>
+            </tr>
+
+        <table class="table table-bordered border-dark">
+          <thead>
+            <tr class="text-white text-center">
+              <th scope="col"class="bg-dark ">Country</th>
+              <th scope="col" class="bg-warning">New Confirmed cases</th>
+              <th scope="col" class="bg-danger">New Deaths</th>
+              <th scope="col" class="bg-info">New recovered </th>
+              <th scope="col" class="bg-success">Total recovered</th>
+              <th scope="col" class="bg-danger">total death</th>
+            </tr>
+          </thead>
+          <h2 class="text-center">world wide data</h2>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+
+        <!-- <button type="button" class="btn btn-primary ">Primary</button> -->
+        
+        
+        <div class="container bg-primary">
+          <div class="row">
+  
+            <div class="col-6 bg-warning">
+                <p id="para1"></p>             
+            </div> 
+            <div class="col-6">
+              <p id="para2"></p>             
+            </div>
+            <div class="col-6 bg-warning">
+              <p id="para3"></p>           
+          </div>
+          <div class="col-6">
+              <p id="para4"></p>             
+            </div>
+            <div class="col-6 bg-warning">
+              <p id="para5"></p>            
+          </div>
+          <div class="col-6">
+              <p id="para6"></p>             
+            </div> 
+          </div>
+      </header>
+
+    <script src="main.js"></script>
+</body>
+</html>
