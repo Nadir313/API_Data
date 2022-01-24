@@ -11,34 +11,37 @@
 <body>
  
   <div class="container">
-    <nav class="navbar navbar-expand-md navbar-light bg-light ">
+    <nav  id="nav" class="navbar navbar-expand-md navbar-light bg-light d-flex justify-content-around navbar-scroll ">
 
       <a href="" class="navbar-brand">
-          <img src="images/Covid-19_Mesures-pour-les-entreprises.png.png" alt="Covid19 logo" width="110" height="60" class="d-inline-block align-top">
+          <img src="images/LOG.png" alt="Covid19 logo" width="160" height="80" class="d-inline-block align-top">
       </a>
-
-      <ul class="navbar-nav d-flex justify-content-evenly ">
-          <li> <a href="" class="nav-link"> worldWide</a></li>
-          <li>  <a href="" class="nav-link">Countries</a></li>  
+      
+      <ul class="navbar-nav  ">
+          <li> <a href="#globalData" class="nav-link"> worldWide</a></li>
+          <li>  <a href="#countriesz" class="nav-link">Countries</a></li>  
       </ul>
+      <a href="" class="navbar-brand">
+        <img src="images/covid19_response_logo_with_un_emblem_horizontal_april_2020.png" alt="world wide health organization"  width="160" height="50" class="d-flex justify-content-end " >
+      </a>
          
     </nav>
 </div>
-      <header >
-        <!-- <div class="container bg-light">
-          <navbar class="navbar navbar-expand-lg navbar-light bg-light">
-              <a href="#" class = "navbar-brand"> Fetchig-api </a>
-              
-          </navbar>
-      </div> -->
-      <select  id="option" class="form-select bg-info" >
+    <article>
+      <div >
+        <img src="images/www.png" width="100%" height="500" alt="">
+      </div>
+    </article>
+      <section id="section" >
+      <select  id="option" class="form-select bg-info m-2" >
           <option selected>Open this select menu</option>
           <option value="1">One</option>
         </select>
   
-          <h2 class="text-center">Global data</h2>
-        <table class="table table-bordered border-primary">
+          <h2 id="globalData" class="text-center">Global data</h2>
+        <table class="table table-bordered border-dark text-white">
           <thead>
+
             <tr class="text-white text-center">
               <th scope="col"class="bg-dark ">NewConfirmed</th>
               <th scope="col" class="bg-warning">TotalConfirmed</th>
@@ -48,11 +51,12 @@
               <th scope="col" class="bg-danger">total death</th>
             </tr>
           </thead>
+
           <tbody id="tbody2">
             <tr>
             </tr>
 
-        <table class="table table-bordered border-dark">
+        <table id="countriesz" class="table table-bordered border text-white ">
           <thead>
             <tr class="text-white text-center">
               <th scope="col"class="bg-dark ">Country</th>
@@ -63,37 +67,48 @@
               <th scope="col" class="bg-danger">total death</th>
             </tr>
           </thead>
+
           <h2 class="text-center">world wide data</h2>
           <tbody id="tbody">
+
           </tbody>
         </table>
 
-        <!-- <button type="button" class="btn btn-primary ">Primary</button> -->
-        
-        
-        <div class="container bg-primary">
+        <div class="container">
+          <div class="row"  id="card">
+
+          </div>
+
+        </section>
+
+      <footer class="pt-1 ">
+
+        <div  class="container p-10">
           <div class="row">
-  
-            <div class="col-6 bg-warning">
-                <p id="para1"></p>             
-            </div> 
-            <div class="col-6">
-              <p id="para2"></p>             
+
+            <div class="col ">
+              <img class="pics" src="images/spacing.jfif" alt="keep it 6feet apart">
+              <p> Remember that some people without symptoms may be able to spread virus. Stay at least 6 Feet <span>Stay Home</span>
+                If You schedule an appointement with your Doctor. God helps All  </p>
+               </div>
+
+            <div class="col">
+              <img class="pics" src="images/covid19_response_logo_with_un_emblem_horizontal_april_2020.png" alt="">
+              <p>
+                © 1995-2022 The Nemours Foundation. Nemours Children’s <a href="">Health®</a> and <a href=""> KidsHealth®</a> are registered trademarks of The Nemours Foundation. All rights reserved.</p>
             </div>
-            <div class="col-6 bg-warning">
-              <p id="para3"></p>           
-          </div>
-          <div class="col-6">
-              <p id="para4"></p>             
+
+            <div class="col">
+              <img class="pics" src="images/thank.jpg" alt="thank u doctor">
+              <p>
+              Note: All information on <a href="">KidsHealth®</a> is for educational purposes only. For specific medical advice, diagnoses, and treatment, consult your doctor.
+              </p>
             </div>
-            <div class="col-6 bg-warning">
-              <p id="para5"></p>            
+
           </div>
-          <div class="col-6">
-              <p id="para6"></p>             
-            </div> 
-          </div>
-      </header>
+        </div>
+
+      </footer>
 
     <script src="main.js"></script>
 </body>

@@ -1,19 +1,38 @@
-
 const api = "https://api.covid19api.com/summary"
 let option = document.querySelector("#option"),
 tbody= document.querySelector("#tbody"),
-tbody2 = document.querySelector("#tbody2"); 
+tbody2 = document.querySelector("#tbody2"),
+list=document.querySelector(".list"),
+card=document.querySelector("#card")
+
+
 var data = []; 
 
 async function getapi(){
     const response = await fetch(api) ;
      data = await response.json() ;
+     console.log(data.Countries[0])
 
-    //  console.log(data.Global.TotalRecovered)
-    // console.log(option)
-    // console.log(data.Global
-    // myCountry();
-
+        data.Countries.forEach((countrie)=>{
+            if(countrie.Country == "Colombia"  ||countrie.Country == "Germany"|| countrie.Country== "India" ||countrie.Country=="Italy"||countrie.Country == "Malaysia"|| countrie.Country=="United States of America"){
+                // console.log(countrie.Country)
+                card.innerHTML += `
+                <div id="maxCountries"  class="col-6 col-md-4 p-4 border">
+               
+                <p class="countryName">${countrie.Country}</p>  
+                <ul class="list">
+                <li> New Confirmed : ${countrie.NewConfirmed} </li>
+                <li> New Recovered : ${countrie.NewRecovered} </li>
+                <li> New Deaths : ${countrie.NewDeaths} </li>
+                <li> Total Confirmed : ${countrie.TotalConfirmed} </li>
+                <li> Total Recovered : ${countrie.TotalRecovered} </li>
+                <li> Totaml Deaths : ${countrie.TotalDeaths} </li>
+                  </ul>           
+              </div> 
+                `
+            }
+           
+        })
     tbody2.innerHTML += ` <tr>
     <td> ${data.Global.NewConfirmed}  </td>
     <td> ${data.Global.TotalConfirmed}  </td>
@@ -21,17 +40,13 @@ async function getapi(){
     <td> ${data.Global.NewConfirmed}  </td>
     <td> ${data.Global.NewRecovered}  </td>
     <td> ${data.Global.NewConfirmed}  </td>
-
     </tr>` 
     for(var i=0;i<data.Countries.length; i++){
-            // console.log(data.Countries[0])
-
             let theCountry = data.Countries[i].Country,
             NewConfirmed = data.Countries[i].NewConfirmed,
             NewDeaths = data.Countries[i].NewDeaths,
             NewRecovered = data.Countries[i].NewRecovered ;
-        if( NewConfirmed !=0 || NewDeaths !=0 || NewRecovered !=0 ){
-
+        if( NewConfirmed > 5000 || NewDeaths >100 || NewRecovered >1000 ){
             tbody.innerHTML +=` <tr>
             <td> ${theCountry}  </td>
             <td> ${NewConfirmed}  </td>
@@ -39,10 +54,8 @@ async function getapi(){
             <td> ${NewRecovered}  </td>
             <td> ${data.Countries[i].TotalRecovered}  </td>
             <td> ${data.Countries[i].TotalDeaths}  </td>
-       
             </tr>` 
         }
-        // console.log(data.Countries[i],i+1)
         option.innerHTML += `<option> ${data.Countries[i].Country} </option>`
     }
 }
@@ -62,67 +75,10 @@ async function getapi(){
         });
    }
  }
-//  selectedCountry() ;
+ selectedCountry() ;
 
 
 // myCountry() ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  const api = " https://api.covid19api.com/summary"
-
-// async function nasa(){
-//     const response = await fetch(api)
-//     const data = await response.json()
-//     console.log(data.Countries[8])
-//     console.log(data.Countries[8].Country)
-//     console.log(data.Countries[8].NewDeaths)
-//     console.log(data.Countries[8].NewRecovered)
-//     console.log(data.Countries[8].TotalConfirmed)
-//     console.log(data.Countries[8].TotalDeaths)
-//     console.log(data.Countries[8].NewConfirmed)
-//     console.log(data.Countries[8].Date)
-
-
-//     // console.log(data.Countries)
-//     const data5 = data.Countries
-//         console.log(data5.Country) 
-        
-//         console.log();  
-//         const option = document.getElementById("data9")
-//         const print1 = data5.map( country => `<option> ${data5}</option> `)
-//         // option.innerHTML += 
-     
-// }
-
-// nasa() ; 
-
-
-
-
-
 
 
 

@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    --size : large ; 
+}
+
+#section{
+    background-image: url(images/fafaffaded.png);
+    background-size: cover;
+}
+.container{
+    width: 100%;
+    /* background-color: rgba(180, 194, 197, 0.836); */
+    
+}
+.list{
+    text-align: center;
+    list-style: none;
+    font-size: var(--size);
+    
+}
+.Countries{
+    text-align: center;
+    font-weight: bold;
+    font-family: var(--font);
+}
+.countryName{
+    text-align: center;
+    color: red;
+    font-size: var(--size);
+    font-family: var(--font);
+}
+
+.pics{
+    border-radius: 6px;
+    width: 220px;
+    height: 90px;
+    padding-left: 60px;
+}
+span{
+    color: red;
+}
+footer{
+    background-image: url(images/footerba.jfif);
+    border: 2px solid red;
+    font-size: small;
+    color: silver;
+    background-color: rgb(172, 195, 202);
+}
+.container{
+    /* border: 2px solid red; */
+    color: white;
+}
