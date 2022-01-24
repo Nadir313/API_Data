@@ -67,11 +67,19 @@ async function getapi(){
         // console.log(data )
         data.Countries.forEach(country => {
             if(country.Country == ourCountry) {
-                alert('it works')
-                console.log( country.Country)
-                console.log(tbody)
-            }
-            
+                // alert('it works')
+                console.log( country)
+                tbody.innerHTML = `
+                <tr>
+                <td>${country.Country} </td>
+                <td>${country.NewConfirmed} </td>
+                <td>${country.NewDeaths} </td>
+                <td>${country.NewRecovered} </td>
+                <td>${country.TotalRecovered} </td>
+                <td>${country.TotalDeaths} </td>
+                </tr>
+                `
+             } 
         });
    }
  }
