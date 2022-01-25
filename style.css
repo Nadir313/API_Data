@@ -35,17 +35,17 @@
 .pics{
     border-radius: 6px;
     width: 290px;
-    height: 140px;
+    height: 110px;
     padding-left: 60px;
 }
 span{
     color: red;
 }
 footer{
-    background-image: url(images/footerba.jfif);
+    background-color: rgba(23, 43, 36, 0.788);
     font-size:x-small;
     color: silver;
-    background-color: rgb(172, 195, 202);
+    height: 300px;
 }
 .container{
     color: white;
