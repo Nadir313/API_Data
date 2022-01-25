@@ -7,15 +7,12 @@
     --font :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
     --size : large ; 
 }
-
 #section{
     background-image: url(images/fafaffaded.png);
     background-size: cover;
 }
 .container{
     width: 100%;
-    /* background-color: rgba(180, 194, 197, 0.836); */
-    
 }
 .list{
     text-align: center;
@@ -37,8 +34,8 @@
 
 .pics{
     border-radius: 6px;
-    width: 220px;
-    height: 90px;
+    width: 290px;
+    height: 140px;
     padding-left: 60px;
 }
 span{
@@ -46,12 +43,21 @@ span{
 }
 footer{
     background-image: url(images/footerba.jfif);
-    border: 2px solid red;
-    font-size: small;
+    font-size:x-small;
     color: silver;
     background-color: rgb(172, 195, 202);
 }
 .container{
-    /* border: 2px solid red; */
     color: white;
+}
+.col h4{
+    color: rgba(9, 44, 73, 0.979);
+}
+.ul{
+    list-style: none;
+    color:black;
+    font-size: large;
+    font-weight: large;
+    font-family:'Times New Roman', Times, serif;
+    margin-right: 80px;
 }

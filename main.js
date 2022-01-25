@@ -4,8 +4,6 @@ tbody= document.querySelector("#tbody"),
 tbody2 = document.querySelector("#tbody2"),
 list=document.querySelector(".list"),
 card=document.querySelector("#card")
-
-
 var data = []; 
 
 async function getapi(){
@@ -15,10 +13,8 @@ async function getapi(){
 
         data.Countries.forEach((countrie)=>{
             if(countrie.Country == "Colombia"  ||countrie.Country == "Germany"|| countrie.Country== "India" ||countrie.Country=="Italy"||countrie.Country == "Malaysia"|| countrie.Country=="United States of America"){
-                // console.log(countrie.Country)
                 card.innerHTML += `
                 <div id="maxCountries"  class="col-6 col-md-4 p-4 border">
-               
                 <p class="countryName">${countrie.Country}</p>  
                 <ul class="list">
                 <li> New Confirmed : ${countrie.NewConfirmed} </li>
@@ -55,14 +51,16 @@ async function getapi(){
             <td> ${data.Countries[i].TotalRecovered}  </td>
             <td> ${data.Countries[i].TotalDeaths}  </td>
             </tr>` 
+
+            option.innerHTML += `<option> ${data.Countries[i].Country} </option>`
         }
-        option.innerHTML += `<option> ${data.Countries[i].Country} </option>`
+        
     }
 }
  async function selectedCountry(){
      await getapi() ;
-     option.onchange = function myCountry(e){
-         let ourCountry = e.target.selectedOptions[0].value
+     option.onchange = function myCountry(event){
+         let ourCountry = event.target.selectedOptions[0].value
         console.log(ourCountry)
         // console.log(data )
         data.Countries.forEach(country => {
